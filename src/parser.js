@@ -186,17 +186,11 @@ function mergeImagesIntoPosts(images, posts) {
       // this image was set as the featured image for this post
       if (image.id === post.meta.coverImageId) {
         shouldAttach = true;
-        // Prepend ../../assets/images/ to the cover image URL
-        post.meta.coverImage =
-          "../../assets/images/" + shared.getFilenameFromUrl(image.url);
+        post.meta.coverImage = shared.getFilenameFromUrl(image.url);
       }
 
-      if (
-        shouldAttach &&
-        !post.meta.imageUrls.includes("../../assets/images/" + image.url)
-      ) {
-        // Prepend ../../assets/images/ to the image URLs before pushing them
-        post.meta.imageUrls.push("../../assets/images/" + image.url);
+      if (shouldAttach && !post.meta.imageUrls.includes(image.url)) {
+        post.meta.imageUrls.push(image.url);
       }
     });
   });
