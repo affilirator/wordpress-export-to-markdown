@@ -74,6 +74,7 @@ async function writeMarkdownFilesPromise(posts, config) {
 	}
 }
 
+/*
 async function loadMarkdownFilePromise(post) {
 	let output = '---\n';
 
@@ -100,6 +101,33 @@ async function loadMarkdownFilePromise(post) {
 	output += `---\n\n${post.content}\n`;
 	return output;
 }
+	*/
+	async function loadMarkdownFilePromise(post) {
+    let output = "---\n";
+
+    Object.entries(post.frontmatter).forEach(([key, value]) => {
+      let outputValue;
+      if (Array.isArray(value)) {
+        if (value.length > 0) {
+          // Return array as a formatted string
+          outputValue = `[${value.map((item) => `"${item}"`).join(", ")}]`;
+        }
+      } else {
+        // single string value
+        const escapedValue = (value || "").replace(/"/g, '\\"');
+        if (escapedValue.length > 0) {
+          outputValue = `"${escapedValue}"`;
+        }
+      }
+
+      if (outputValue !== undefined) {
+        output += `${key}: ${outputValue}\n`;
+      }
+    });
+
+    output += `---\n\n${post.content}\n`;
+    return output;
+  }
 
 async function writeImageFilesPromise(posts, config) {
 	// collect image data from all posts into a single flattened array of payloads
