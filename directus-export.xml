@@ -1,0 +1,26 @@
+<?xml version='1.0'?>
+<data>
+    <data>
+        <fullName>Patrick Mahinge</fullName>
+        <slug>patrick-mahinge</slug>
+        <authorBio>Patrick Mahinge is a full time forex trader, money manager, and consultant to major financial funds. At only 35 years old he is widely considered an up and rising star in the forex trading community and is known for his simple and profitable forex trading strategies...</authorBio>
+        <authorSocial>
+            <Twitter>https://twitter.com/demagnify</Twitter>
+            <Website>https://mahinge.com/</Website>
+            <Facebook>https://facebook.com/patrickmahinge/</Facebook>
+            <LinkedIn>https://linkedin.com/in/patrick-mahinge-2a415a5a</LinkedIn>
+        </authorSocial>
+        <authorAvatar>null</authorAvatar>
+        <jobTitle>Author</jobTitle>
+        <knowsAbout>
+            <name>Cryptocurrency</name>
+            <type>Thing</type>
+            <sameAs>https://en.wikipedia.org/wiki/Cryptocurrency</sameAs>
+        </knowsAbout>
+        <knowsAbout>
+            <name>forex</name>
+            <type>Thing</type>
+            <sameAs>https://en.wikipedia.org/wiki/Foreign_exchange_market</sameAs>
+        </knowsAbout>
+    </data>
+</data>

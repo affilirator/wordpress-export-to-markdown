@@ -1,0 +1,7 @@
+"design-planting"
+"fertilizer-nutrients"
+"from-garden-to-mouth"
+"garden-care"
+"grass"
+"irrigation"
+"plants"
