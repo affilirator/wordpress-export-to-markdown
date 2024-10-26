@@ -1,5 +1,11 @@
 # wordpress-export-to-markdown
 
+## Dealing with images in images/
+
+Looks like you cannnot change where the attached images are saved and it will always be in images/fileName.
+To get the correct path names, you can later copy and place the images in the correct directory.
+In this case, stop even setting the featured image save directory. So that it will be easier to move and update the paths from the terminal.
+
 Converts a WordPress export file into Markdown files that are compatible with static site generators ([Eleventy](https://www.11ty.dev/), [Gatsby](https://www.gatsbyjs.com/), [Hugo](https://gohugo.io/), etc.).
 
 Each post is saved as a separate Markdown file with frontmatter. Images are downloaded and saved.
@@ -9,6 +15,7 @@ Each post is saved as a separate Markdown file with frontmatter. Images are down
 ## Quick Start
 
 You'll need:
+
 - [Node.js](https://nodejs.org/) installed
 - Your [WordPress export file](https://wordpress.org/support/article/tools-export-screen/) (be sure to export "All content").
 
